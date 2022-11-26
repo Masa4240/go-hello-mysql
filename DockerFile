@@ -1,0 +1,8 @@
+FROM golang:latest
+
+RUN mkdir /app
+WORKDIR /app
+
+RUN go install github.com/gin-gonic/gin@latest
+RUN go install github.com/go-sql-driver/mysql
+RUN go install github.com/jinzhu/gorm
